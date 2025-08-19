@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour of Dom</title>
+</head>
+<style>
+    .food-title{
+        background-color: cyan;
+        color: red;
+    }
+    .bold{
+        font-size: 4rem;
+        color: red;
+    }
+</style>
+<body>
+    <header>
+        <h1 id="header" class="food-title">This is my header no banner</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit, ad.</p>
+    </header>
+    <section>
+        <h1 id="food-text">Foods I love</h1>
+        <ul>
+            <li>Rice</li>
+            <li>Potato</li>
+            <li>Fish</li>
+            <li>Lentils</li>
+            <li class="foreign">Burger</li>
+            <li class="foreign">Pizza</li>
+            <li class="foreign">Pasta</li>
+        </ul>
+    </section>
+    <main id="old-dhaka" class="songs">
+        <h1>Wellcome to <span>My</span> Dom</h1>
+        <p>Lorem ipsum <span>dolor</span> sit amet consectetur, adipisicing elit. <span>foreng</span> voluptatem ipsa laboriosam.</p>
+        <ul>
+            <li class="foreign">Shafayet</li>
+            <li>Bonobash</li>
+            <li id="band">Jalali Set</li>
+        </ul>
+        <h1>good enough</h1>
+    </main>
+    <section id="players-container">
+        <h1>Players</h1>
+        <ul>
+            <li>Messi</li>
+            <li>Pele</li>
+            <li>Ronaldo</li>
+            <li>Embape</li>
+        </ul>
+    </section>
+    <footer id="bolder">
+        <h1>hello world</h1>
+    </footer>
+    
+    <script>
+        // console.log('ami start at now');
+        // console.log('hello bole chole gelo');
+
+        const student = {
+            name: "Abul mia",
+            id: 121,
+            study: function(subject){
+                console.log(subject);
+            }
+        }
+        //document.getElementsByTagName
+        const listItems = document.getElementsByTagName('li');
+        // console.log(listItems);
+        let headTagTotal = document.getElementsByTagName("h1");
+        // console.log(headTagTotal);
+        for(const heading of headTagTotal){
+            // console.log(heading);
+            // console.log(heading.innerText);
+        }
+        for(const li of listItems){
+            // console.log(li.innerText);
+        }
+        const paragraphs = document.getElementsByTagName('p');
+        // console.log(paragraphs);
+        for(const para of paragraphs){
+            // console.log(para);
+            // console.log(para.innerText);
+            // console.log(para.innerHTML);
+        }
+        const foodText = document.getElementById("food-text");
+        // console.log(foodText);
+        // console.log(foodText.innerText);
+        // console.log(foodText.innerHTML);
+        // foodText.innerText = ('Food is good')
+        const bandElement = document.getElementById('band');
+        bandElement.innerText = 'Jalali khan band';
+        // console.log(bandElement);
+
+
+        // get Element by class name
+
+        const foreignElements = document.getElementsByClassName('foreign');
+        // console.log(foreignElements);
+        for(const element of foreignElements){
+            // console.log(element);
+            // console.log(element.innerText);
+        }
+
+
+        //query selector all 
+
+
+        const spanElements = document.querySelectorAll('#old-dhaka');
+        // console.log(spanElements);
+        for(const element of spanElements){
+            // console.log(element.innerText);
+        }
+        const headerElement  = document.getElementById("header");
+        // console.log(headerElement);
+        const bolderFooter = document.getElementById("bolder");
+        console.log(bolderFooter);
+    </script>
+    <script src="js/hello.js"></script>
+</body>
+
+</html>
