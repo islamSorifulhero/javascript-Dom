@@ -43,7 +43,7 @@
         </ul>
         <h1>good enough</h1>
     </main>
-    <section id="players-container">
+    <section id="sections">
         <h1>Players</h1>
         <ul>
             <li>Messi</li>
@@ -55,7 +55,7 @@
     <footer id="bolder">
         <h1>hello world</h1>
     </footer>
-    
+
     <script>
         // console.log('ami start at now');
         // console.log('hello bole chole gelo');
@@ -117,9 +117,19 @@
         const headerElement  = document.getElementById("header");
         // console.log(headerElement);
         const bolderFooter = document.getElementById("bolder");
-        console.log(bolderFooter);
+        // console.log(bolderFooter);
+
+
+        const section = document.getElementById('sections');
+        // console.log(section);
+        for(const sectionElement of section){
+            console.log(section.innerText);
+        }
+
+    
     </script>
     <script src="js/hello.js"></script>
+    <script src="js/cssInJs.js"></script>
 </body>
 
 </html>
