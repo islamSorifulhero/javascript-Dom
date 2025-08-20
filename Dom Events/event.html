@@ -9,11 +9,25 @@
     <h1 id="page-title">Event Handler</h1>
     <button id="btn-update-title">Update title</button>
 
+    <p id="user-info">No user</p>
+    <button id="btn-login">Login</button>
+    <br>
+    <br>
+    <br>
+    <!-- handle input text -->
+    <p id="change-name">No Name</p>
+    <input id="name-input" placeholder="Your name" type="text">
+    <button id="btn-update">update</button>
 
-    
 
     <script>
-        
+        const btnUpdate = document.getElementById('btn-update').addEventListener('click', function(){
+            const nameInput = document.getElementById('name-input');
+            const inputName = nameInput.value;
+
+            const changeName = document.getElementById('change-name');
+            changeName.innerText = inputName;
+        })
     </script>
     <script src="js/handler.js"></script>
 </body>
